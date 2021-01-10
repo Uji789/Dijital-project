@@ -1,0 +1,59 @@
+@@include("blocks/_header.html",
+    {
+        "title": "Dijital Project",
+        "desc": "Повышенное качество обслуживания клиентов"
+    }
+)
+<header class="header">
+    <div class="container header__container">
+        <div class="header__logo">
+            <a class="header__logo-link" href="/">
+                <img class="header__logo-img" src="img/logo.svg" alt="Dijital Project">
+            </a>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">главная</a></li>
+                <li class="header__nav-item">
+                        <a class="header__nav-link" href="#">галерея</a></li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">проекты</a></li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">сертификаты</a></li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">контакты</a></li>
+            </ul>
+        </nav>
+        <div class="header__mobile-menu">
+            <button class="hamburger" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="mobile__menu">
+                <ul class="header__nav-list mobile__menu-list">
+                    <li class="header__nav-item mobile__menu-item">
+                        <a class="header__nav-link" href="#">главная</a></li>
+                    <li class="header__nav-item mobile__menu-item">
+                            <a class="header__nav-link" href="#">галерея</a></li>
+                    <li class="header__nav-item mobile__menu-item">
+                        <a class="header__nav-link" href="#">проекты</a></li>
+                    <li class="header__nav-item mobile__menu-item">
+                        <a class="header__nav-link" href="#">сертификаты</a></li>
+                    <li class="header__nav-item mobile__menu-item">
+                        <a class="header__nav-link" href="#">контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+@@include("blocks/_footer.html",
+    {
+        "desc": "Повышенное качество обслуживания клиентов"
+    }
+)

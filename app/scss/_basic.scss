@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    font-family: "TTHoves", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    background-color: $white;
+
+    &.no-scroll{
+        overflow: hidden;
+    }
+}
+//  Container
+.container{
+    width: 100%;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}

@@ -1,0 +1,97 @@
+.header{
+    &__container{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @media (max-width: 400px){
+            padding-top: 15px;
+        }
+    }
+    &__nav{
+        width: 60%;
+        margin-right: 120px;
+
+        @media (max-width: 1000px){
+            width: 65%;
+        }
+        @media (max-width: 900px){
+            width: 70%;
+        }
+        @media (max-width: 800px){
+            width: 75%;
+            margin-right: 0;
+        }
+        @media (max-width: 700px){
+            width: 250px;
+        }
+        @media (max-width: 500px){
+            display: none;
+        }
+
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 700px){
+                flex-wrap: wrap;
+            }
+        }
+
+        &-item{
+            list-style: none;
+            @media (max-width: 700px){
+                padding: 0 20px;
+            }
+        }
+
+        &-link{
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: 0.2em;
+            color: $gray-one;
+            text-transform: uppercase;
+
+            @media (max-width: 700px){
+                line-height: 30px;
+            }
+
+            &:hover{
+                border-top: 1px solid $gray-one;
+                padding-top: 5px;
+                border-bottom: 1px solid $gray-one;
+            }
+        }
+    }
+    // * Мобильное меню
+    &__mobile-menu{
+        display: none;
+        @media (max-width: 500px){
+            display: block;
+        }
+    }
+    .mobile__menu{
+        // display: none;
+        position: fixed;
+        background-color: $white;
+        width: 100%;
+        top: 90px;
+        right: -100%;
+        transition: all 0.5s ease-in;
+
+        &--active{
+            right: 0;
+        }
+
+        &-list{
+            line-height: 60px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-left: 0;
+        }
+
+    }
+}
