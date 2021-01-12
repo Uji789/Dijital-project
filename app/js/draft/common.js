@@ -9,5 +9,18 @@ document.addEventListener('DOMContentLoaded', function(){
         document.body.classList.toggle("no-scroll");
     }
 
-    hamburger.addEventListener("click", toggleMobileMenu)
+    hamburger.addEventListener("click", toggleMobileMenu);
+
+    // slider
+    const swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+        },
+        navigation: {
+            nextEl: '.control__img-right',
+            prevEl: '.control__img-left',
+        },
+    });
+
 });

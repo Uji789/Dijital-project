@@ -2,7 +2,26 @@
 @import "mixin.scss";
 @import"fonts.scss";
 
-// базовые стили
+// Basic style
 @import "basic";
-// header
+
+// Header
 @import "components/header";
+
+// section "Header-hero"
+@import "components/header-hero";
+
+//  section "About"
+@import "components/about";
+
+//  section "Our tasks"
+@import "components/tasks";
+
+//  section "Our projects"
+@import "components/projects";
+
+// section "Contact us", form
+@import "./components/form";
+
+// Footer
+@import "./components/footer";

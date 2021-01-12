@@ -48,8 +48,155 @@
         </div>
     </div>
 </header>
-
-
+<section class="header-hero">
+    <div class="container header-hero__container">
+        <div class="section">
+            <div class="left">
+                <h1 class="left__title"><span class="left__title-span">project</span> nurtown</h1>
+                <div class="control-buttons">
+                    <button class="control">
+                        <img src="img/arrow-left.png" alt="" class="control__img-left">
+                    </button>
+                    <button class="control">
+                        <img src="img/arrow-right.png" alt="" class="control__img-right">
+                    </button>
+                </div>
+                <button class="btn left-btn">взглянуть
+                    <img class="left-btn__img" src="img/ico-shape.png" alt="">
+                </button>
+            </div>
+            <div class="right">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide">
+                                <img class="slide-img first" src="img/project-building.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide">
+                                <img class="slide-img" src="img/pexelsjpeg1.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination">
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+<section class="about">
+    <div class="container about__container">
+        <div class="about__content">
+            <div class="about__pictures grid-container">
+                <div class="about__img img-first">
+                    <img src="img/sec1.png" alt="About">
+                </div>
+                <div class="about__img img-second">
+                    <img src="img/sec2-2.png" alt="About">
+                </div>
+                <div class="about__img img-third">
+                    <img src="img/sec2-3.png" alt="About">
+                </div>
+            </div>
+            <div class="about__desc">
+                <h2 class="about__desc-title">О компании</h2>
+                <p class="about__desc-exerpt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <button class="btn about__button">читать
+                    <img src="img/ico-shape.png" alt="Arrow">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="tasks">
+    <div class="container tasks__container">
+        <div class="tasks__wrapper">
+            <div class="tasks__title about__desc-title">Основные задачи</div>
+            <div class="tasks__desc">
+                <div class="tasks__desc-one">
+                    <img class="first" src="img/first.png" alt="first">
+                    <p class="tasks__desc-text tasks__desc-text-align">Создание комфортных условий и повышение качества обслуживания клиентов</p>
+                </div>
+                <div class="tasks__desc-two">
+                    <img class="second" src="img/second.png" alt="second">
+                    <p class="tasks__desc-text">Постоянно совершенствовать качество предоставляемых услуг путем обучения персонала, закупки нового оборудования и усиленной рекламы на рынке</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="projects">
+    <div class="container project__container">
+        <div class="project__title about__desc-title">Наши проекты</div>
+        <div class="project__portfolio">
+            <div class="project__portfolio-page">
+                <img class="project__portfolio-img" src="img/port5.png" alt="Main project">
+                <div class="project__portfolio-link">
+                    <h2 class="project__portfolio-title">досуговый центр</h2>
+                    <button class="button project__portfolio-more" href="#">подробнее
+                        <img class="ico-arrow" src="img/ico-shape-white.png" alt="See portfolio more">
+                    </button>
+                </div>
+                <img class="project__portfolio-img" src="img/port1.png" alt="Our project">
+                <img class="project__portfolio-img" src="img/port4.png" alt="Our project">
+                <img class="project__portfolio-img" src="img/port3.png" alt="Our project">
+                <img class="project__portfolio-img" src="img/port2.png" alt="Our project">
+            </div>
+        </div>
+        <div class="project__portfolio-button">
+            <button class="btn project__portfolio-btn">все проекты
+            <img class="ico-arrow" src="img/ico-shape-white.png" alt="All projects">
+        </button>
+        </div>
+    </div>
+</section>
+<section class="contact">
+    <div class="container contact__container">
+        <div class="contact__title about__desc-title">Связаться с нами</div>
+        <div class="contact__wrapper">
+            <div class="contact__wrapper-form">
+                <form class="contact__form" method="POST" action="#">
+                    <div class="form-row">
+                        <input type="text" name="name" class="input" id="name">
+                        <label for="name" class="input-i">Имя</label>
+                    </div>
+                    <div class="form-row">
+                        <input type="tel" name="phone" class="input" id="phone">
+                        <label for="phone" class="input-i">Номер телефона <i>*</i></label>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" name="email" class="input" id="email">
+                        <label for="email" class="input-i">E-mail <i>*</i></label>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="service" class="input" id="service">
+                        <label for="service" class="input-i">Интересующий товар/услуга</label>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" name="message" class="input" id="message">
+                        <label for="message" class="input-i">Сообщение<i>*</i></label>
+                    </div>
+                    <div class="form-attention">
+                        <p class="attention">Отправляя заявку Вы соглашаетесь
+                            с политикой конфиденциальности</p>
+                    </div>
+                </form>
+                <button class="btn form-submit" type="submit">отправить
+                    <img class="ico-arrow-form" src="img/ico-shape-white.png" alt="Submit form">
+                </button>
+            </div>
+            <div class="contact__wrapper-img">
+                <img class="contact-img" src="img/form.png" alt="contact us">
+            </div>
+        </div>
+    </div>
+</section>
 
 
 @@include("blocks/_footer.html",

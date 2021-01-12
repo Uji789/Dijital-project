@@ -1,0 +1,109 @@
+.contact{
+    &__container{
+        padding-top: 100px;
+        padding-bottom: 120px;
+    }
+    &__wrapper{
+        display: flex;
+        
+        @media (max-width: 1127px){
+            flex-wrap: wrap;
+        }
+
+
+        &__form{
+            width: 50%;
+
+            @media (max-width: 424px){
+                width: 100%;
+            }
+        }
+        &-img{
+            width: 64%;
+        }
+    }
+    &-img{
+        width: 100%;
+        height: auto;
+
+        @media (max-width: 843px){
+            display: none;
+        }
+    }
+    #message{
+        height: 110px;
+    }
+    .input {
+        display: block;
+        width: 390px;
+        height: 26px;
+        padding: .5rem;
+        border: none;
+        background-color: $lightgray;
+        outline: none;
+        background-color: #F3F3F3;
+        margin-top: 10px;
+
+        @media (max-width: 424px){
+            width: 310px;
+        }
+
+        &:focus~.input-i{
+            opacity: 0;
+        }
+      }
+    #name{
+        margin-top: 0;
+    }
+    .form-row {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    .input-i {
+        display: block;
+        color: #8D8D8D;
+        font-size: .75rem;
+        line-height: 1.25rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        padding: .5rem;
+        opacity: 1;
+        transition: all .17s ease-in-out;
+
+        & i{
+            color: red;
+        }
+    }
+    &-attention{
+        width: 50%;
+    }
+    .attention{
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.03em;
+        margin-left: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        @media (max-width: 844px){
+            font-size: 13px;
+        }
+        @media (max-width: 424px){
+            margin-left: 10px;
+        }
+    }
+    .form-submit{
+        background-color: $gray-one;
+        color: $white;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .ico-arrow-form{
+        margin-left: 15px;
+    }
+}

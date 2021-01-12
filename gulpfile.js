@@ -8,14 +8,19 @@ const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
 const fileinclude = require("gulp-file-include");
 
+const htmlmin = require("gulp-htmlmin");
+const webphtml = require("gulp-webp-html");
+// const webpCss = require("gulp-webp-css");
+const toWebp = require("gulp-webp");
+
 // ! Creating folders and files
 function folders (){
     return src("*.*", {read: false}) 
-    .pipe(dest("./project/scss/"))
-    .pipe(dest("./project/js/"))
-    .pipe(dest("./project/js/draft/"))
-    .pipe(dest("./project/img/"))
-    .pipe(dest("./project/fonts/"))
+    .pipe(dest("./dist/scss/"))
+    .pipe(dest("./dist/js/"))
+    .pipe(dest("./dist/js/draft/"))
+    .pipe(dest("./dist/img/"))
+    .pipe(dest("./dist/fonts/"))
 };
 function files (){
     folders();
@@ -78,12 +83,13 @@ function browserSync (){
         }
     });
 };
-// * Image Compressed
-function compressedImg (){
-    return src("app/img/*.{jpg, svg, png, gif}")
-    .pipe(imgmin())
-    .pipe(dest("dist/img"))
+// * Convert imades to webp
+function convertImgs (){
+    return src("app/img/*.jpg")
+    .pipe(toWebp())
+    .pipe(dest("app/img"))
 };
+
 // * Сonvert TTF fonts
 exports.cFonts = series(convertFonts, fontsStyle);
 
@@ -159,33 +165,49 @@ exports.fontStyle = fontsStyle;
 exports.convertFonts = convertFonts;
 // File-include, HTML parts
 exports.includeFile = includeFile;
+// * Convert imades to webp
+exports.convertImgs = convertImgs;
 
 
-exports.default = parallel(includeFile, stylesConvert, browserSync, watchFiles);
+exports.default = parallel(includeFile, stylesConvert, browserSync, watchFiles, convertImgs);
 
 
 
 // ! Build
 function moveHtml (){
     return src("app/*.html")
+    .pipe(webphtml())
+    .pipe(htmlmin(
+        { collapseWhitespace: true,
+          removeComments: true
+        }
+    ))
     .pipe(dest("dist"))
 };
 function moveCss (){
     return src("app/css/*.css")
+    // .pipe(webpCss())
     .pipe(dest("dist/css"))
+};
+function moveFonts (){
+    return src("app/fonts/**")
+    .pipe(dest("dist/fonts"))
 };
 function moveJs (){
     return src("app/js/*.js")
     .pipe(dest("dist/js"))
 };
-function moveImgs (){
-    return src("app/img/compressed-img/*")
+// * Image Compressed
+function compressedImg (){
+    return src("app/img/**")
+    .pipe(imgmin())
     .pipe(dest("dist/img"))
 };
 
 exports.moveHtml = moveHtml;
 exports.moveCss = moveCss;
 exports.moveJs = moveJs;
-exports.moveImgs = moveImgs;
+exports.compressedImg = compressedImg;
+exports.moveFonts = moveFonts
 
-exports.build = series(moveHtml, moveCss, moveJs, moveImgs);
+exports.build = series(moveHtml, moveCss, moveJs, moveFonts, compressedImg);
